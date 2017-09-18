@@ -1,0 +1,32 @@
+{
+  "name": "hapi-mysql2",
+  "version": "0.9.0",
+  "description": "A simple mysql plugin for hapijs that handles multiple connections, inspired by https://github.com/Marsup/hapi-mongodb",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "async": "^2.5.0",
+    "joi": "^11.0.1",
+    "mysql": "^2.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/midnightcodr/hapi-mysql2.git"
+  },
+  "keywords": [
+    "hapijs",
+    "mysql"
+  ],
+  "author": "Rico Chen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/midnightcodr/hapi-mysql2/issues"
+  },
+  "homepage": "https://github.com/midnightcodr/hapi-mysql2#readme"
+}
