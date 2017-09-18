@@ -38,7 +38,7 @@ server.register({
                 }
                 reply({result});
             })
-		}
+        }
     });
 
     server.start(function() {
