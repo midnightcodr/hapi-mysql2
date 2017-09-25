@@ -46,3 +46,8 @@ server.register({
     });
 });
 ```
+
+Test instruction:
+```
+url=mysql://someuser:somepass@somehost/test npm test
+```
