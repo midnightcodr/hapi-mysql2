@@ -51,3 +51,5 @@ Test instruction:
 ```
 url=mysql://someuser:somepass@somehost/test npm test
 ```
+
+For more usage examples, see [lib/index.test.js](https://github.com/midnightcodr/hapi-mysql2/blob/master/lib/index.test.js#L193).
