@@ -1,55 +1,50 @@
 Inspired by https://github.com/Marsup/hapi-mongodb, here's another simple
 mysql plugin for hapijs that supports multiple connections.
 
+Update: Starting from version 1.0.0 this plugin only supports Hapi version 17 and above. If you are using hapijs prior to version 17, please checkout version [0.9.5](https://github.com/midnightcodr/hapi-mysql2/tree/0.9.5)
 
 Usage example: 
 
 ```javascript
-const Hapi = require('hapi');
-const Boom = require('boom');
+const Hapi = require('hapi')
+const Boom = require('boom')
 
-const clientOpts = {
-    settings: 'mysql://user:secret@localhost/test?insecureAuth=true',
-    decorate: true
-};
-
-const server = new Hapi.Server();
-server.connection({ port: 8000 });
-
-server.register({
-    register: require('./lib'),
-    options: clientOpts
-}, function (err) {
-    if (err) {
-        console.error(err);
-        throw err;
+const launchServer = async function() {
+    const clientOpts = {
+        settings: 'mysql://user:secret@localhost/test?insecureAuth=true',
+        decorate: true
     }
+    const server = Hapi.Server({ port: 8080 })
+
+    await server.register({
+        plugin: require('hapi-mysql2'),
+        options: clientOpts
+    })
 
     server.route({
         method: 'GET',
         path: '/mysql',
-        handler(request, reply) {
-            const pool = request.mysql.pool;
+        async handler(request) {
+            const pool = request.mysql.pool
 
-            pool.query('select 1 as counter', (err, result) => {
-                if(err) {
-                    console.log(err);
-                    return reply(Boom.internal('Internal Mysql Error'));
-                }
-                reply({result});
-            })
+            try {
+                result = await pool.query('select 1 as counter')
+                return result
+            } catch (err) {
+                throw Boom.internal('Internal Mysql Error', err)
+            }
         }
-    });
+    })
 
-    server.start(function() {
-        console.log(`Server started at ${server.info.uri}`);
-    });
-});
+    await server.start()
+    console.log(`Server started at ${server.info.uri}`)
+}
+
+launchServer().catch(err => {
+    console.error(err)
+    process.exit(1)
+})
+
 ```
 
-Test instruction:
-```
-url=mysql://someuser:somepass@somehost/test npm test
-```
-
-For more usage examples, see [lib/index.test.js](https://github.com/midnightcodr/hapi-mysql2/blob/master/lib/index.test.js#L193).
+See [lib/index.test.js](lib/index.test.js) for more usage examples.
