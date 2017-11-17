@@ -28,7 +28,7 @@ const launchServer = async function() {
             const pool = request.mysql.pool
 
             try {
-                result = await pool.query('select 1 as counter')
+                let result = await pool.query('select 1 as counter')
                 return result
             } catch (err) {
                 throw Boom.internal('Internal Mysql Error', err)
