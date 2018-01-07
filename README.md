@@ -1,18 +1,18 @@
-Inspired by https://github.com/Marsup/hapi-mongodb, here's another simple
-mysql plugin for hapijs that supports multiple connections. 
+### About
+Inspired by https://github.com/Marsup/hapi-mongodb, here's another mysql plugin that is based on node-mysql2 for hapijs that supports multiple connections. 
 
-Updates:
+### Updates:
 - Starting from version 2, I've switched to using [node-mysql2](https://github.com/sidorares/node-mysql2)
 - Starting from version 1.0.0 this plugin only supports Hapi version 17 and above. If you are using hapijs prior to version 17, please checkout version [0.9.5](https://github.com/midnightcodr/hapi-mysql2/tree/0.9.5)
 
 
-Options:
+### Options:
 
 - `decorate`: string or boolean, mixed use of different types of decorate settings are not allowed.
 
 - `settings`: the options to initialize a pooling connection, can be either a string or object. For detail usage please refer to [https://github.com/mysqljs/mysql#pooling-connections](https://github.com/mysqljs/mysql#pooling-connections), note if you do not specify `connectionLimit` in settings, a default number of 10 will be used.
 
-Usage example: 
+### Usage example: 
 
 ```javascript
 /*
