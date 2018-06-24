@@ -7,12 +7,12 @@
     "lib": "lib"
   },
   "dependencies": {
-    "joi": "^13.2.0",
+    "joi": "^13.4.0",
     "mysql2": "^1.5.3"
   },
   "devDependencies": {
-    "hapi": "^17.3.1",
-    "jest": "^22.0.4"
+    "hapi": "^17.5.1",
+    "jest": "^23.1.0"
   },
   "scripts": {
     "test": "jest"
