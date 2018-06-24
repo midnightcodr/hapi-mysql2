@@ -23,7 +23,7 @@
     "eslint-plugin-standard": "^3.1.0"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "lint": "eslint lib/**/*.js"
   },
   "repository": {
