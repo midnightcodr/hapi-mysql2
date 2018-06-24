@@ -1,0 +1,43 @@
+{
+    "env": {
+        "jest/globals": true,
+        "es6": true
+    },
+    "parserOptions": {
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true
+        },
+        "sourceType": "module"
+    },
+    "extends": [
+        "eslint:recommended",
+        "standard"
+    ],
+    "plugins": [
+        "jest"
+    ],
+    "rules": {
+        "indent": [
+            "error",
+            4
+        ],
+        "no-console": "off",
+        "space-before-function-paren": [
+            "error",
+            {
+                "named": "never",
+                "anonymous": "never"
+            }
+        ],
+        "one-var": [
+            "error",
+            "never"
+        ],
+        "no-trailing-spaces": [
+            2,
+            {
+                "skipBlankLines": true
+            }
+        ]
+    }
+}

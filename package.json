@@ -12,10 +12,19 @@
   },
   "devDependencies": {
     "hapi": "^17.5.1",
-    "jest": "^23.1.0"
+    "jest": "^23.1.0",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-async-await": "0.0.0",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jest": "^21.17.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint": "eslint lib/**/*.js"
   },
   "repository": {
     "type": "git",
