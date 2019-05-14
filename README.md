@@ -21,8 +21,8 @@ Inspired by https://github.com/Marsup/hapi-mongodb, here's another mysql plugin 
     create table if not exists info(id int unsigned auto_increment primary key, name varchar(50));
     insert into table info(name) values ('test1'), ('test 2'), ('3'), ('something else');
 */
-const Hapi = require('hapi')
-const Boom = require('boom')
+const Hapi = require('@hapi/hapi')
+const Boom = require('@hapi/boom')
 
 const launchServer = async function() {
     const clientOpts = {
