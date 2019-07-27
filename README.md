@@ -4,6 +4,7 @@ Inspired by https://github.com/Marsup/hapi-mongodb, here's another mysql plugin 
 ### Updates
 - Starting from version 2, I've switched to using [node-mysql2](https://github.com/sidorares/node-mysql2)
 - Starting from version 1.0.0 this plugin only supports Hapi version 17 and above. If you are using hapijs prior to version 17, please checkout version [0.9.5](https://github.com/midnightcodr/hapi-mysql2/tree/0.9.5)
+- Starting from version 2.3.0 this plugin only supports Hapi version 18.2 and above. If you are using hapijs prior to that, please checkout version [2.2.5](https://github.com/midnightcodr/hapi-mysql2/tree/2.2.5)
 
 
 ### Options
