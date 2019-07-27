@@ -1,6 +1,6 @@
 {
   "name": "hapi-mysql2",
-  "version": "2.3.2",
+  "version": "2.4.0",
   "description": "A simple node-mysql2 plugin for hapijs that handles multiple connections, inspired by https://github.com/Marsup/hapi-mongodb",
   "main": "lib/index.js",
   "directories": {
