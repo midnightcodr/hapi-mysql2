@@ -14,7 +14,7 @@
     "@hapi/code": "^6.0.0",
     "@hapi/hapi": "^18.3.1",
     "@hapi/lab": "^19.1.0",
-    "standard": "^13.1.0"
+    "standard": "^14.0.2"
   },
   "scripts": {
     "test": "lab -M 5000 -l -t 100 lib/index.test.js",
