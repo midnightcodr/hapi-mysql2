@@ -27,7 +27,8 @@ const Boom = require('@hapi/boom')
 
 const launchServer = async function() {
     const clientOpts = {
-        settings: 'mysql://user:secret@localhost/test',
+        // enableKeepAlive and keepAliveInitialDelay require at least mysql2@2.1.0 to work
+        settings: 'mysql://user:secret@localhost/test?enableKeepAlive=true&keepAliveInitialDelay=10000&connectionLimit=2',
         decorate: true
     }
     const server = Hapi.Server({ port: 8080 })

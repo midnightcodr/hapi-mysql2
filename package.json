@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@hapi/joi": "^15.0.3",
-    "mysql2": "^1.6.5"
+    "mysql2": "^2.1.0"
   },
   "devDependencies": {
     "@hapi/code": "^6.0.0",
