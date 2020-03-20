@@ -18,9 +18,9 @@ Inspired by https://github.com/Marsup/hapi-mongodb, here's another mysql plugin 
 ```javascript
 /*
     Database preparation:
-    create database if not exists test;
-    create table if not exists info(id int unsigned auto_increment primary key, name varchar(50));
-    insert into table info(name) values ('test1'), ('test 2'), ('3'), ('something else');
+    CREATE DATABASE IF NOT EXISTS test;
+    CREATE TABLE IF NOT EXISTS INFO(id int unsigned auto_increment primary key, name varchar(50));
+    INSERT INTO INFO(name) VALUES ('test1'), ('test 2'), ('3'), ('something else');
 */
 const Hapi = require('@hapi/hapi')
 const Boom = require('@hapi/boom')

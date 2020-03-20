@@ -12,8 +12,8 @@
   },
   "devDependencies": {
     "@hapi/code": "^6.0.0",
-    "@hapi/hapi": "^18.4.0",
-    "@hapi/lab": "^19.1.0",
+    "@hapi/hapi": "^18.4.1",
+    "@hapi/lab": "^22.0.4",
     "standard": "^14.0.2"
   },
   "scripts": {
